@@ -13,6 +13,7 @@ choco install ccleaner -y
 choco install procexp -y
 choco install hashcheck -y
 choco install teamviewer -y
+choco install qbittorrent -y
 
 REM SysAdmin
 choco install PowerShell -y
