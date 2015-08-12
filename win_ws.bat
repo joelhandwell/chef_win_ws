@@ -1,7 +1,3 @@
-REM Windows 7
-choco install MicrosoftSecurityEssentials -y
-choco install ie11 -y
-
 REM Utility
 choco install google-chrome-x64 -y
 choco install adobereader -y
@@ -9,17 +5,12 @@ choco install javaruntime -y
 choco install jdk8 -y
 choco install 7zip -y
 choco install Wget -y
-choco install ccleaner -y
-choco install procexp -y
 choco install hashcheck -y
 choco install teamviewer -y
-choco install qbittorrent -y
 
 REM SysAdmin
-choco install PowerShell -y
 choco install ConEmu -y
 choco install putty -y
-choco install lili -y
 
 REM Coding
 choco install vim -y
