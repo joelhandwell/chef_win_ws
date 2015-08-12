@@ -3,7 +3,7 @@ choco install MicrosoftSecurityEssentials -y
 choco install ie11 -y
 
 REM Utility
-choco install GoogleChrome -y
+choco install google-chrome-x64 -y
 choco install adobereader -y
 choco install javaruntime -y
 choco install jdk8 -y
