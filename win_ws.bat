@@ -16,7 +16,7 @@ REM Coding
 choco install vim -y
 choco install SublimeText3 -y
 choco install kdiff3 -y
-choco install git -y
+choco install git -y -params '"/GitAndUnixToolsOnPath"' 
 
 REM DevOps
 choco install virtualbox -y
