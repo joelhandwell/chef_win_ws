@@ -12,6 +12,7 @@ REM SysAdmin
 choco install ConEmu -y
 choco install putty -y
 choco install rsync -y
+choco install wget -y
 
 REM Coding
 choco install vim -y
