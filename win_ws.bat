@@ -22,4 +22,5 @@ REM DevOps
 choco install virtualbox -y
 choco install vagrant -y
 choco install packer -y
+choco install terraform -y
 choco install chefdk -y
