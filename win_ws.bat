@@ -1,8 +1,6 @@
 REM Utility
 choco install google-chrome-x64 -y
 choco install adobereader -y
-choco install javaruntime -y
-choco install jdk8 -y
 choco install 7zip -y
 choco install Wget -y
 choco install hashcheck -y
