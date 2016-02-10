@@ -24,3 +24,5 @@ choco install vagrant -y
 choco install packer -y
 choco install terraform -y
 choco install chefdk -y
+
+SETX GEM_PATH C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0
