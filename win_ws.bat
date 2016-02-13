@@ -26,3 +26,15 @@ choco install terraform -y
 choco install chefdk -y
 
 SETX GEM_PATH C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0
+
+REM Performance settings. Execute after creating RAM drive D
+MKDIR D:\Windows\TEMP
+MKDIR D:\Users\%USERNAME\AppData\Local\Temp
+SETX TMP D:\Users\%USERNAME\AppData\Local\Temp
+SETX TEMP D:\Users\%USERNAME\AppData\Local\Temp
+
+MKDIR D:\Users\%USERNAME\AppData\Roaming
+SETX APPDATA D:\Users\%USERNAME\AppData\Roaming
+
+MKDIR D:\Users\%USERNAME\AppData\Local
+SETX LOCALAPPDATA D:\Users\%USERNAME\AppData\Local
