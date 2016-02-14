@@ -1,16 +1,15 @@
 REM Performance settings. Execute after creating RAM drive D
 MKDIR D:\Windows\TEMP
-MKDIR D:\Users\%USERNAME\AppData\Local\Temp
-SETX TMP D:\Users\%USERNAME\AppData\Local\Temp
-SETX TEMP D:\Users\%USERNAME\AppData\Local\Temp
+MKDIR D:\Users\%USERNAME%\AppData\Local\Temp
+SETX TMP D:\Users\%USERNAME%\AppData\Local\Temp
+SETX TEMP D:\Users\%USERNAME%\AppData\Local\Temp
+MKDIR D:\Users\%USERNAME%\AppData\Roaming
+SETX APPDATA D:\Users\%USERNAME%\AppData\Roaming
+MKDIR D:\Users\%USERNAME%\AppData\Local
+SETX LOCALAPPDATA D:\Users\%USERNAME%\AppData\Local
 
-MKDIR D:\Users\%USERNAME\AppData\Roaming
-SETX APPDATA D:\Users\%USERNAME\AppData\Roaming
-
-MKDIR D:\Users\%USERNAME\AppData\Local
-SETX LOCALAPPDATA D:\Users\%USERNAME\AppData\Local
-
-REM prepare chocolatey installation directory https://github.com/chocolatey/choco/wiki/Installation#before-you-install
+REM Prepare chocolatey installation directory https://github.com/chocolatey/choco/wiki/Installation#before-you-install
+MKDIR D:\ProgramData\Chocolatey
 SETX ChocolateyInstall D:\ProgramData\Chocolatey
 
 REM Utility
@@ -31,13 +30,28 @@ REM Coding
 choco install vim -y
 choco install SublimeText3 -y
 choco install kdiff3 -y
-choco install git -y -params '"/GitAndUnixToolsOnPath"' 
 
-REM DevOps
-choco install virtualbox -y
-choco install vagrant -y
+REM Git
+MKDIR D:\Git
+choco install git -y -ia 'INSTALLDIR=D:\Git' -params '"/GitAndUnixToolsOnPath"'
+
+REM VirtualBox
+MKDIR D:\Oracle\VirtualBox
+MKDIR D:\Users\Joel\VirtualBoxVMs
+SET ProgramFiles(x86)=D:/ && choco install virtualbox -y -ia 'INSTALLDIR=D:\Oracle\VirtualBox'
+SETX /M PATH "%PATH%;D:\Oracle\VirtualBox"
+VBoxManage setproperty machinefolder D:\Users\Joel\VirtualBoxVMs
+
+REM Vagrant
+MKDIR D:\HashiCorp\Vagrant
+MKDIR D:\Users\%USERNAME%\.vagrant.d
+SETX VAGRANT_HOME D:\Users\%USERNAME%\.vagrant.d
+choco install vagrant -y -ia 'VAGRANTAPPDIR=D:\HashiCorp\Vagrant'
+
+REM ChefDK
+MKDIR D:\opscode\chefdk
+choco install chefdk -y -ia 'TARGETDIR=D:\opscode\chefdk'
+SETX GEM_PATH D:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0
+
 choco install packer -y
 choco install terraform -y
-choco install chefdk -y
-
-SETX GEM_PATH C:/opscode/chefdk/embedded/lib/ruby/gems/2.1.0
