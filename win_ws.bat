@@ -33,7 +33,7 @@ choco install kdiff3 -y
 
 REM Git
 MKDIR D:\Git
-choco install git -y -ia 'INSTALLDIR=D:\Git' -params '"/GitAndUnixToolsOnPath"'
+choco install git.install -y -ia '/DIR=D:\Git' -params '/GitAndUnixToolsOnPath'
 
 REM VirtualBox
 MKDIR D:\Oracle\VirtualBox
@@ -49,8 +49,8 @@ SETX VAGRANT_HOME D:\Users\%USERNAME%\.vagrant.d
 choco install vagrant -y -ia 'VAGRANTAPPDIR=D:\HashiCorp\Vagrant'
 
 REM ChefDK
-MKDIR D:\opscode\chefdk
-choco install chefdk -y -ia 'TARGETDIR=D:\opscode\chefdk'
+MKDIR D:\opscode
+choco install chefdk -y -ia 'INSTALLLOCATION=D:\opscode'
 SETX GEM_PATH D:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0
 
 choco install packer -y
