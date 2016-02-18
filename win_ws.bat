@@ -37,10 +37,10 @@ choco install git.install -y -ia '/DIR=D:\Git' -params '/GitAndUnixToolsOnPath'
 
 REM VirtualBox
 MKDIR D:\Oracle\VirtualBox
-MKDIR D:\Users\Joel\VirtualBoxVMs
+MKDIR D:\Users\%USERNAME%\VirtualBoxVMs
 SET ProgramFiles(x86)=D:/ && choco install virtualbox -y -ia 'INSTALLDIR=D:\Oracle\VirtualBox'
 SETX /M PATH "%PATH%;D:\Oracle\VirtualBox"
-VBoxManage setproperty machinefolder D:\Users\Joel\VirtualBoxVMs
+VBoxManage setproperty machinefolder D:\Users\%USERNAME%\VirtualBoxVMs
 
 REM Vagrant
 MKDIR D:\HashiCorp\Vagrant
