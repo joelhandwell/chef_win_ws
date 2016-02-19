@@ -21,7 +21,7 @@ choco install hashcheck -y
 choco install teamviewer -y
 
 REM SysAdmin
-choco install ConEmu -y
+choco install ConEmu -y -ia 'APPLICATIONFOLDER=D:\Conemu'
 choco install putty -y
 choco install rsync -y
 choco install clink -y
