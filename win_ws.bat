@@ -28,7 +28,7 @@ choco install clink -y
 
 REM Coding
 choco install vim -y
-choco install SublimeText3 -y
+choco install sublimetext3 -y -ia '/DIR=D:\Sublime'
 choco install kdiff3 -y
 
 REM Git
