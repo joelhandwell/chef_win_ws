@@ -53,5 +53,11 @@ MKDIR D:\opscode
 choco install chefdk -y -ia 'INSTALLLOCATION=D:\opscode'
 SETX GEM_PATH D:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0
 
+REM Other Devops tools
 choco install packer -y
 choco install terraform -y
+
+REM Docker Related tools
+choco install docker -y
+choco install docker-machine -y
+choco install docker-compose -y
