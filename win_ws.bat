@@ -1,16 +1,16 @@
 REM Performance settings. Execute after creating RAM drive D
-MKDIR D:\Windows\TEMP
-MKDIR D:\Users\%USERNAME%\AppData\Local\Temp
-SETX TMP D:\Users\%USERNAME%\AppData\Local\Temp
-SETX TEMP D:\Users\%USERNAME%\AppData\Local\Temp
-MKDIR D:\Users\%USERNAME%\AppData\Roaming
-SETX APPDATA D:\Users\%USERNAME%\AppData\Roaming
-MKDIR D:\Users\%USERNAME%\AppData\Local
-SETX LOCALAPPDATA D:\Users\%USERNAME%\AppData\Local
+MKDIR C:\Windows\TEMP
+MKDIR C:\Users\%USERNAME%\AppData\Local\Temp
+SETX TMP C:\Users\%USERNAME%\AppData\Local\Temp
+SETX TEMP C:\Users\%USERNAME%\AppData\Local\Temp
+MKDIR C:\Users\%USERNAME%\AppData\Roaming
+SETX APPDATA C:\Users\%USERNAME%\AppData\Roaming
+MKDIR C:\Users\%USERNAME%\AppData\Local
+SETX LOCALAPPDATA C:\Users\%USERNAME%\AppData\Local
 
 REM Prepare chocolatey installation directory https://github.com/chocolatey/choco/wiki/Installation#before-you-install
-MKDIR D:\ProgramData\Chocolatey
-SETX ChocolateyInstall D:\ProgramData\Chocolatey
+MKDIR C:\ProgramData\Chocolatey
+SETX ChocolateyInstall C:\ProgramData\Chocolatey
 
 REM Heavy Guys
 choco install google-chrome-x64 -y
@@ -24,37 +24,37 @@ choco install hashcheck -y
 choco install linkshellextension -y
 
 REM SysAdmin
-choco install ConEmu -y -ia 'APPLICATIONFOLDER=D:\Conemu'
+choco install ConEmu -y -ia 'APPLICATIONFOLDER=C:\Conemu'
 choco install putty -y
 choco install rsync -y
 choco install clink -y
 
 REM Coding
 choco install vim -y
-choco install sublimetext3 -y -ia '/DIR=D:\Sublime'
+choco install sublimetext3 -y -ia '/DIR=C:\Sublime'
 choco install kdiff3 -y
 
 REM Git
-MKDIR D:\Git
-choco install git.install -y -ia '/DIR=D:\Git' -params '/GitAndUnixToolsOnPath'
+MKDIR C:\Git
+choco install git.install -y -ia '/DIR=C:\Git' -params '/GitAndUnixToolsOnPath'
 
 REM VirtualBox
-MKDIR D:\Oracle\VirtualBox
-MKDIR D:\Users\%USERNAME%\VirtualBoxVMs
-SET ProgramFiles(x86)=D:/ && choco install virtualbox -y -ia 'INSTALLDIR=D:\Oracle\VirtualBox'
-SETX /M PATH "%PATH%;D:\Oracle\VirtualBox"
-VBoxManage setproperty machinefolder D:\Users\%USERNAME%\VirtualBoxVMs
+MKDIR C:\Oracle\VirtualBox
+MKDIR C:\Users\%USERNAME%\VirtualBoxVMs
+SET ProgramFiles(x86)=C:/ && choco install virtualbox -y -ia 'INSTALLDIR=C:\Oracle\VirtualBox'
+SETX /M PATH "%PATH%;C:\Oracle\VirtualBox"
+VBoxManage setproperty machinefolder C:\Users\%USERNAME%\VirtualBoxVMs
 
 REM Vagrant
-MKDIR D:\HashiCorp\Vagrant
-MKDIR D:\Users\%USERNAME%\.vagrant.d
-SETX VAGRANT_HOME D:\Users\%USERNAME%\.vagrant.d
-choco install vagrant -y -ia 'VAGRANTAPPDIR=D:\HashiCorp\Vagrant'
+MKDIR C:\HashiCorp\Vagrant
+MKDIR C:\Users\%USERNAME%\.vagrant.d
+SETX VAGRANT_HOME C:\Users\%USERNAME%\.vagrant.d
+choco install vagrant -y -ia 'VAGRANTAPPDIR=C:\HashiCorp\Vagrant'
 
 REM ChefDK
-MKDIR D:\opscode
-choco install chefdk -y -ia 'INSTALLLOCATION=D:\opscode'
-SETX GEM_PATH D:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0
+MKDIR C:\opscode
+choco install chefdk -y -ia 'INSTALLLOCATION=C:\opscode'
+SETX GEM_PATH C:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0
 
 REM Other Devops tools
 choco install packer -y
