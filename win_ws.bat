@@ -22,6 +22,7 @@ choco install 7zip -y
 choco install Wget -y
 choco install hashcheck -y
 choco install linkshellextension -y
+choco install hosts.editor -y
 
 REM SysAdmin
 choco install ConEmu -y -ia 'APPLICATIONFOLDER=C:\Conemu'
