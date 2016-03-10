@@ -1,18 +1,4 @@
-REM Prepare chocolatey installation directory https://github.com/chocolatey/choco/wiki/Installation#before-you-install
-MKDIR C:\ProgramData\Chocolatey
-SETX ChocolateyInstall C:\ProgramData\Chocolatey
-
-REM Heavy Guys
-choco install google-chrome-x64 -y
-choco install adobereader -y
-choco install teamviewer -y
-
-REM Utility
-choco install 7zip -y
-choco install Wget -y
-choco install hashcheck -y
-choco install linkshellextension -y
-choco install hosts.editor -y
+REM Run chocolatey.bat first if you do not installed chocolatey
 
 REM SysAdmin
 choco install ConEmu -y -ia 'APPLICATIONFOLDER=C:\Conemu'
