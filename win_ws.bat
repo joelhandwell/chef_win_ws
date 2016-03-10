@@ -1,5 +1,7 @@
 REM Run chocolatey.bat first if you do not installed chocolatey
 
+REM if you want to install them into D:, E: etc, replace C: to other drive letters.
+
 REM SysAdmin
 choco install ConEmu -y -ia 'APPLICATIONFOLDER=C:\Conemu'
 choco install putty -y
