@@ -14,9 +14,7 @@ Let's assume you have brand new Windows instalation, run scripts in this reposit
 7. Set PATH
 Your system environemt variable ```%PATH%``` should end like following :
 ```
-
 ... some other software
-
 C:\Program Files\Git\cmd;
 C:\Program Files\Git\mingw64\bin;
 C:\Program Files\Git\usr\bin;
