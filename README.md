@@ -7,13 +7,11 @@ Let's assume you have brand new Windows instalation, run scripts in this reposit
 
 1. open cmd as Administrator 
 2. run ```performance.bat``` (Optional)
-2. run ```chocolatey.bat```
-3. run ```win_ws.bat```
-4. run ```utils.bat``` (Optional)
-
-Download and install [Windows Environment Variables Editor](http://eveditor.com/) for your convenience (Optional).
-
-5. Set PATH
+3. run ```chocolatey.bat```
+4. run ```win_ws.bat```
+5. run ```utils.bat``` (Optional)
+6. Download and install [Windows Environment Variables Editor](http://eveditor.com/) for your convenience (Optional).
+7. Set PATH
 Your system environemt variable ```%PATH%``` should end like following :
 ```
 
