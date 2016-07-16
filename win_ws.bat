@@ -7,15 +7,21 @@ choco install ConEmu -y -ia 'APPLICATIONFOLDER=C:\Conemu'
 choco install putty -y
 choco install rsync -y
 choco install clink -y
-
-REM Coding
 choco install vim -y
-choco install sublimetext3 -y -ia '/DIR=C:\Sublime'
-choco install kdiff3 -y
 
-REM Git
-MKDIR C:\Git
-choco install git.install -y -ia '/DIR=C:\Git' -params '/GitAndUnixToolsOnPath'
+REM Sublime (Custom Location)
+REM choco install sublimetext3 -y -ia '/DIR=C:\Sublime'
+
+REM Sublime (Default Location)
+choco install sublimetext3 -y
+
+REM Git (Custom Location)
+REM MKDIR C:\Git
+REM choco install git.install -y -ia '/DIR=C:\Git' -params '/GitAndUnixToolsOnPath'
+
+REM Git (Default Location)
+choco install git.install -y -params '/GitAndUnixToolsOnPath'
+choco install kdiff3 -y
 
 REM VirtualBox
 MKDIR C:\Oracle\VirtualBox
