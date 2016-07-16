@@ -1,3 +1,6 @@
+REM ConEmu
+choco install ConEmu -y -ia 'APPLICATIONFOLDER=C:\Conemu'
+
 REM Sublime
 choco install sublimetext3 -y -ia '/DIR=C:\Sublime'
 
