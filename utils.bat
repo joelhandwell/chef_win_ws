@@ -10,3 +10,9 @@ choco install Wget -y
 choco install hashcheck -y
 choco install linkshellextension -y
 choco install hosts.editor -y
+
+REM AWS related
+choco install python -y
+refreshenv
+pip install --upgrade --user awscli
+SETX /M PATH "%PATH%;%USERPROFILE%\AppData\Roaming\Python\Python36\Scripts"
