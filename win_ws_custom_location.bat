@@ -24,4 +24,4 @@ choco install vagrant -y -ia 'VAGRANTAPPDIR=C:\HashiCorp\Vagrant'
 REM ChefDK
 MKDIR C:\opscode
 choco install chefdk -y -ia 'INSTALLLOCATION=C:\opscode'
-SETX GEM_PATH C:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0
+SETX GEM_PATH C:\opscode\chefdk\embedded\lib\ruby\gems\2.4.0
