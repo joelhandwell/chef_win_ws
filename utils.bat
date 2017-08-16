@@ -5,15 +5,6 @@ choco install libreoffice -y
 choco install gimp -y
 choco install inkscape -y
 
-REM Utility
-choco install ccleaner -y
-choco install 7zip -y
-choco install Wget -y
-choco install hashcheck -y
-choco install linkshellextension -y
-choco install hosts.editor -y
-choco install greenshot -y
-
 REM AWS related
 choco install python -y
 refreshenv
